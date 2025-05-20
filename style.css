@@ -1,23 +1,56 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    height: 100vh;
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+
+}
+
+.slideImg .container{
+    width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #6a3093, #a044ff);
+}
+
+.slideImg .container .panel{
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
     color: white;
-    font-family: Arial, sans-serif;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: flex 2s;
 }
 
-.clock-container{
-    width: 300px;
-    height: 120px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
+.container .panel h3{
+    font-size: 24px;
+    margin: 0px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 2px 20px;
+    border-radius: 15px;
 }
 
+.container .panel.active{
+    flex: 10;
+}
+
+.container .panel.active h3{
+    opacity: 1;
+    transition: opacity 1s 1s;
+}
+
+/* Ẩn bớt phần tử khi quá màn hình */
+@media (max-width: 720px) {
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+
+}
