@@ -3,7 +3,11 @@
 }
 h1{
     text-align: center;
-
+    background-color: aquamarine;
+    width: 30vw;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-bottom: 30px;
 }
 
 .slideImg .container{
